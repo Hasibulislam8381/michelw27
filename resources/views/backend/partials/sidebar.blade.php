@@ -1,7 +1,7 @@
    <!-- Page Sidebar Start-->
    <div class="sidebar-wrapper" data-layout="stroke-svg">
-       <div class="logo-wrapper"><a href="index.html"><img class="img-fluid" src="{{ asset($setting->logo) }}"
-                   alt=""></a>
+       <div class="logo-wrapper"><a href="{{ route('admin.dashboard') }}"><img height="60px !important"
+                   src="{{ asset($setting->logo) }}" alt=""></a>
            <div class="back-btn"><i class="fa fa-angle-left"> </i></div>
            <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="grid">
                </i></div>
@@ -59,7 +59,7 @@
                        </a>
 
                        <ul
-                           class="sidebar-submenu {{ request()->routeIs('admin.system.*') || request()->routeIs('admin.profile.*') || request()->routeIs('admin.social.*') ? 'd-block' : '' }}">
+                           class="sidebar-submenu {{ request()->routeIs('admin.system.*') || request()->routeIs('admin.profile.*') || request()->routeIs('admin.social.*') || request()->routeIs('admin.dynamic_page.*') ? 'd-block' : '' }}">
                            <li>
                                <a class="{{ request()->routeIs('admin.system.*') ? 'active' : '' }}"
                                    href="{{ route('admin.system.index') }}">
@@ -76,6 +76,12 @@
                                <a class="{{ request()->routeIs('admin.social.*') ? 'active' : '' }}"
                                    href="{{ route('admin.social.index') }}">
                                    Social Setting
+                               </a>
+                           </li>
+                           <li>
+                               <a class="{{ request()->routeIs('admin.dynamic_page.*') ? 'active' : '' }}"
+                                   href="{{ route('admin.dynamic_page.index') }}">
+                                   Dynamic Page
                                </a>
                            </li>
                        </ul>
@@ -105,7 +111,7 @@
                            <h6 class="lan-8">Applications</h6>
                        </div>
                    </li>
-                   <li class="sidebar-list">
+                   {{-- <li class="sidebar-list">
                        <i class="fa fa-thumb-tack"></i>
                        <a class="sidebar-link sidebar-title {{ request()->routeIs('admin.blogs.*') ? 'active' : '' }}"
                            href="#">
@@ -132,7 +138,7 @@
                                </a>
                            </li>
                        </ul>
-                   </li>
+                   </li> --}}
                </ul>
                <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
            </div>

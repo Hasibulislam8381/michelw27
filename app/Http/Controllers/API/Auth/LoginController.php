@@ -28,21 +28,53 @@ class LoginController extends Controller
      * @return void
      */
 
-    private function sendOtp($user)
+    private function sendOtp(User $user)
     {
+        // Check if OTP already exists and not expired
+        $existingOtp = EmailOtp::where('user_id', $user->id)->first();
+
+        if ($existingOtp) {
+            $expiresAt = $existingOtp->expires_at instanceof \Carbon\Carbon
+                ? $existingOtp->expires_at
+                : \Carbon\Carbon::parse($existingOtp->expires_at)->setTimezone('UTC');
+
+            $now = \Carbon\Carbon::now('UTC');
+
+            if ($now->lt($expiresAt)) {
+                $remaining = $now->diffInSeconds($expiresAt);
+                return response()->json([
+                    'status' => false,
+                    'message' => "Please wait {$remaining} seconds before requesting a new OTP.",
+                    'data' => [],
+                ], 422);
+            }
+        }
+
+        // OTP expired or not exists
         $code = rand(1000, 9999);
 
-        // Store verification code in the database
-        $verification = EmailOtp::updateOrCreate(
+        $otp = EmailOtp::updateOrCreate(
             ['user_id' => $user->id],
             [
+                'name' => $user->name,
+                'email' => $user->email,
+                'password' => $user->password,
+                'avatar' => $user->avatar ?? null,
                 'verification_code' => $code,
-                'expires_at'        => Carbon::now()->addMinutes(1),
+                'expires_at' => Carbon::now('UTC')->addMinute(),
             ]
         );
 
+
         Mail::to($user->email)->send(new ForgotPasswordOtp($user, $code));
+
+        return response()->json([
+            'status' => true,
+            'message' => 'An OTP has been sent to your email',
+            'data' => [],
+        ], 200);
     }
+
 
     /**
      * Send a Register (OTP) to the user via email.
@@ -129,7 +161,6 @@ class LoginController extends Controller
         if ($validator->fails()) {
             return $this->error($validator->errors(), "Validation Error", 422);
         }
-
         try {
             // Retrieve the user by email
             $user = User::where('email', $request->input('email'))->first();
@@ -253,5 +284,12 @@ class LoginController extends Controller
         } catch (\Exception $e) {
             return $this->error([], $e->getMessage(), 500);
         }
+    }
+    public function logout(Request $request)
+    {
+        // Revoke the token that was used to authenticate the current request
+        $request->user()->currentAccessToken()->delete();
+
+        return $this->success([], 'Logged out successfully', 200);
     }
 }

@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\BlogController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\DynamicPageController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\SocialMediaController;
 use App\Http\Controllers\Admin\SystemSettingController;
@@ -28,3 +29,15 @@ Route::controller(SocialMediaController::class)->group(function () {
     Route::delete('/social-media/{id}', 'destroy')->name('social.delete');
 });
 Route::resource('blogs', BlogController::class)->names('blogs');
+Route::post('blogs/{id}/status', [BlogController::class, 'updateStatus'])
+    ->name('blogs.updateStatus');
+
+Route::controller(DynamicPageController::class)->group(function () {
+    Route::get('/dynamic-page', 'index')->name('dynamic_page.index');
+    Route::get('/dynamic-page/create', 'create')->name('dynamic_page.create');
+    Route::post('/dynamic-page/store', 'store')->name('dynamic_page.store');
+    Route::get('/dynamic-page/edit/{id}', 'edit')->name('dynamic_page.edit');
+    Route::post('/dynamic-page/update/{id}', 'update')->name('dynamic_page.update');
+    Route::get('/dynamic-page/status/{id}', 'status')->name('dynamic_page.status');
+    Route::delete('/dynamic-page/destroy/{id}', 'destroy')->name('dynamic_page.destroy');
+});

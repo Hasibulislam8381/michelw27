@@ -8,7 +8,7 @@
  <meta name="author" content="pixelstrap">
  <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon">
  <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
- <title>Riho - Premium Admin Template</title>
+ <title>Michel</title>
  <!-- Google font-->
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -59,6 +59,22 @@
      .admin_bg {
          background: #fffefe;
          padding: 10px 14px;
+     }
+
+     .form-check-input.status-toggle {
+         width: 45px;
+         height: 22px;
+         cursor: pointer;
+         transition: all 0.3s ease-in-out;
+     }
+
+     .page-link.active,
+     .active>.page-link {
+         background-color: #006666
+     }
+
+     .form-check-input.status-toggle:focus {
+         box-shadow: none;
      }
  </style>
  {{-- dropify and ck-editor end --}}

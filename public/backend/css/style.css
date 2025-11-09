@@ -115,7 +115,7 @@
 
  */
 :root {
-    --theme-deafult: #006666;
+    --theme-deafult: black;
     --theme-secondary: #FE6A49;
     --light-background: rgba(242, 243, 247, 0.7);
     --body-font-color: #86909C;
@@ -1354,7 +1354,7 @@ svg.f-light {
 /*====== Image-sizes css ends ======*/
 /*======= Text css starts ===========*/
 .font-primary {
-    color: #006666 !important;
+    color: black !important;
 }
 
 .font-secondary {
@@ -1405,11 +1405,11 @@ svg.f-light {
 }
 
 .label-theme {
-    background-color: #006666;
+    background-color: black;
 }
 
 .label-primary {
-    background-color: #006666;
+    background-color: black;
 }
 
 .label-secondary {
@@ -1443,7 +1443,7 @@ svg.f-light {
 /*======= Label-color css ends  ======= */
 /*======= Badge-color css starts  ======= */
 .badge-primary {
-    background-color: #006666;
+    background-color: black;
 }
 
 .badge-secondary {
@@ -1485,7 +1485,7 @@ svg.f-light {
 /*======= Badge-color css end  ======= */
 /*======= Background-color css starts  ======= */
 .bg-primary {
-    background-color: #006666 !important;
+    background-color: black !important;
     color: #fff;
 }
 
@@ -1615,7 +1615,7 @@ svg.f-light {
 /*======= Background-color css end  ======= */
 /*======= Font-color css starts  ======= */
 .txt-primary {
-    color: #006666 !important;
+    color: black !important;
 }
 
 .txt-secondary {
@@ -1697,8 +1697,8 @@ svg.f-light {
 }
 
 .btn-primary {
-    background-color: #006666 !important;
-    border-color: #006666 !important;
+    background-color: black !important;
+    border-color: black !important;
     -webkit-tap-highlight-color: transparent;
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
@@ -1706,8 +1706,8 @@ svg.f-light {
 
 .btn-primary.disabled,
 .btn-primary:disabled {
-    background-color: #006666 !important;
-    border-color: #006666 !important;
+    background-color: black !important;
+    border-color: black !important;
 }
 
 .btn-primary:focus {
@@ -1884,8 +1884,8 @@ svg.f-light {
 /*======= Button-color css ends  ======= */
 .btn-outline-primary-2x {
     border-width: 2px;
-    border-color: #006666;
-    color: #006666;
+    border-color: black;
+    color: black;
     background-color: transparent;
 }
 
@@ -1894,8 +1894,8 @@ svg.f-light {
 .btn-outline-primary-2x:active,
 .btn-outline-primary-2x.active {
     color: white !important;
-    background-color: #006666 !important;
-    border-color: #006666 !important;
+    background-color: black !important;
+    border-color: black !important;
     -webkit-box-shadow: none;
     box-shadow: none;
 }
@@ -2083,29 +2083,29 @@ svg.f-light {
 }
 
 .btn-check {
-    color: #006666 !important;
+    color: black !important;
 }
 
 .btn-check:checked {
     color: white !important;
-    background-color: #006666 !important;
+    background-color: black !important;
 }
 
 .btn-check:checked+.btn-outline-primary {
     color: white !important;
-    background-color: #006666 !important;
+    background-color: black !important;
     -webkit-box-shadow: unset !important;
     box-shadow: unset !important;
 }
 
 .btn-check+.btn-outline-primary {
-    border-color: #006666 !important;
-    color: #006666 !important;
+    border-color: black !important;
+    color: black !important;
     background-color: transparent;
 }
 
 .btn-check+.btn-outline-primary.disabled {
-    color: #006666;
+    color: black;
 }
 
 .btn-check+.btn-outline-primary:hover,
@@ -2114,21 +2114,21 @@ svg.f-light {
 .btn-check+.btn-outline-primary:focus-visible,
 .btn-check+.btn-outline-primary.active {
     color: white !important;
-    background-color: #006666 !important;
-    border-color: #006666 !important;
+    background-color: black !important;
+    border-color: black !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
 }
 
 .btn-outline-primary {
-    border-color: #006666;
-    color: #006666;
+    border-color: black;
+    color: black;
     background-color: transparent;
 }
 
 .btn-outline-primary.disabled {
-    color: #006666;
-    border-color: #006666;
+    color: black;
+    border-color: black;
 }
 
 .btn-outline-primary:hover,
@@ -2136,8 +2136,8 @@ svg.f-light {
 .btn-outline-primary:active,
 .btn-outline-primary.active {
     color: #fff !important;
-    background-color: #006666 !important;
-    border-color: #006666 !important;
+    background-color: black !important;
+    border-color: black !important;
     -webkit-box-shadow: unset !important;
     box-shadow: unset !important;
 }
@@ -2701,8 +2701,8 @@ svg.f-light {
 }
 
 .btn-outline-primary-2x:not([disabled]):not(.disabled).active {
-    background-color: #006666;
-    border-color: #006666;
+    background-color: black;
+    border-color: black;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
     color: #fff;
@@ -2715,8 +2715,8 @@ svg.f-light {
     color: #fff !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
-    background-color: #006666 !important;
-    border-color: #006666 !important;
+    background-color: black !important;
+    border-color: black !important;
 }
 
 .btn-outline-secondary-2x:not([disabled]):not(.disabled).active {
@@ -2856,7 +2856,7 @@ svg.f-light {
 table thead .border-bottom-primary th,
 table tbody .border-bottom-primary th,
 table tbody .border-bottom-primary td {
-    border-bottom: 1px solid #006666 !important;
+    border-bottom: 1px solid black !important;
 }
 
 table thead .border-bottom-secondary th,
@@ -2905,9 +2905,9 @@ table tbody .border-bottom-warning td {
 /*======= Table styling css starts  ======= */
 .table-styling .table-primary,
 .table-styling.table-primary {
-    background-color: #006666;
+    background-color: black;
     color: #fff;
-    border: 3px solid #006666;
+    border: 3px solid black;
 }
 
 .table-styling .table-primary thead,
@@ -3066,7 +3066,7 @@ table tbody .border-bottom-warning td {
 /*======= Table styling css ends  ======= */
 /*======= Svg stroke css start  ======= */
 .stroke-primary {
-    stroke: #006666 !important;
+    stroke: black !important;
 }
 
 .stroke-secondary {
@@ -3100,8 +3100,8 @@ table tbody .border-bottom-warning td {
 /*======= Svg stroke css end  ======= */
 /*======= Checkbox color css start  ======= */
 .checkbox-primary.form-check-input:checked {
-    background-color: #006666;
-    border-color: #006666;
+    background-color: black;
+    border-color: black;
 }
 
 .checkbox-secondary.form-check-input:checked {
@@ -3142,39 +3142,39 @@ table tbody .border-bottom-warning td {
 /*======= Checkbox color css end  ======= */
 /*======= All-Borders-color css starts  ======= */
 .b-primary {
-    border: 1px solid #006666 !important;
+    border: 1px solid black !important;
 }
 
 .b-t-primary {
-    border-top: 1px solid #006666 !important;
+    border-top: 1px solid black !important;
 }
 
 .border-t-primary {
-    border-top: 1px solid #006666 !important;
+    border-top: 1px solid black !important;
 }
 
 .b-b-primary {
-    border-bottom: 1px solid #006666 !important;
+    border-bottom: 1px solid black !important;
 }
 
 .border-b-primary {
-    border-bottom: 1px solid #006666 !important;
+    border-bottom: 1px solid black !important;
 }
 
 .b-l-primary {
-    border-left: 1px solid #006666 !important;
+    border-left: 1px solid black !important;
 }
 
 .border-l-primary {
-    border-left: 1px solid #006666 !important;
+    border-left: 1px solid black !important;
 }
 
 .b-r-primary {
-    border-right: 1px solid #006666 !important;
+    border-right: 1px solid black !important;
 }
 
 .border-r-primary {
-    border-right: 1px solid #006666 !important;
+    border-right: 1px solid black !important;
 }
 
 .b-secondary {
@@ -3531,7 +3531,7 @@ table tbody .border-bottom-warning td {
 }
 
 .options>div:hover {
-    background-color: #006666;
+    background-color: black;
     color: #fff;
     -webkit-transition: background-color 0.3s ease;
     transition: background-color 0.3s ease;
@@ -3559,12 +3559,12 @@ table tbody .border-bottom-warning td {
 
 .dropzone .dz-preview .dz-error-message {
     background: #fff !important;
-    color: #006666 !important;
-    border: 1px solid #006666;
+    color: black !important;
+    border: 1px solid black;
 }
 
 .dropzone .dz-preview .dz-error-message:after {
-    border-bottom: 6px solid #006666 !important;
+    border-bottom: 6px solid black !important;
 }
 
 .typeahead .theme-form .form-group {
@@ -3774,7 +3774,7 @@ table tbody .border-bottom-warning td {
 /*======= light-color ======= */
 .badge-light-primary {
     background-color: #29ffff;
-    color: #006666;
+    color: black;
 }
 
 .badge-light-secondary {
@@ -3855,8 +3855,8 @@ table tbody .border-bottom-warning td {
     box-sizing: content-box;
     width: 0;
     height: 0;
-    border: 4px solid #006666;
-    border: calc(var(--fc-daygrid-event-dot-width, 8px) / 2) solid var(--fc-event-border-color, #006666);
+    border: 4px solid black;
+    border: calc(var(--fc-daygrid-event-dot-width, 8px) / 2) solid var(--fc-event-border-color, black);
     border-radius: 4px;
     border-radius: calc(var(--fc-daygrid-event-dot-width, 8px) / 2);
 }
@@ -3908,7 +3908,7 @@ table tbody .border-bottom-warning td {
 .balance-box .balance-img .edit-icon svg {
     width: 11px;
     height: 11px;
-    fill: #006666;
+    fill: black;
 }
 
 .balance-item {
@@ -4118,7 +4118,7 @@ code {
 }
 
 blockquote {
-    border-left: 4px solid #006666;
+    border-left: 4px solid black;
     padding: 18px;
 }
 
@@ -4128,7 +4128,7 @@ blockquote {
 
 .figure.text-end blockquote {
     border-left: none !important;
-    border-right: 4px solid #006666;
+    border-right: 4px solid black;
 }
 
 .row>div {
@@ -4693,8 +4693,8 @@ table tbody tr {
 }
 
 .accordion-wrapper:active {
-    border: 1px solid #006666;
-    border-top: 1px solid #006666 !important;
+    border: 1px solid black;
+    border-top: 1px solid black !important;
 }
 
 .accordion-border .accordion-item {
@@ -4720,7 +4720,7 @@ table tbody tr {
      2.2 Alert CSS start
 ==========================**/
 .notify-alert .close {
-    color: #006666;
+    color: black;
     background: unset;
     border: none;
     font-size: 25px;
@@ -4858,56 +4858,56 @@ strong~p {
 }
 
 .alert-primary .alert-link {
-    color: #006666;
+    color: black;
 }
 
 .alert-primary hr {
-    border-top-color: #006666;
+    border-top-color: black;
 }
 
 .border-primary {
-    border-color: #006666 !important;
+    border-color: black !important;
 }
 
 .income-wrapper ul li .income-dot.dot-primary {
-    background-color: #006666;
+    background-color: black;
 }
 
 .touchspin-wrapper .btn-touchspin.touchspin-primary {
-    background-color: #006666;
-    border: 1px solid #006666;
+    background-color: black;
+    border: 1px solid black;
     color: #fff;
 }
 
 .touchspin-wrapper .btn-touchspin.spin-border-primary {
     background-color: unset;
-    border: 1px solid #006666;
-    color: #006666;
+    border: 1px solid black;
+    color: black;
 }
 
 .touchspin-wrapper input[type=number].spin-outline-primary {
-    outline: 1px solid #006666;
+    outline: 1px solid black;
     border: none;
     border-radius: 3px;
 }
 
 .pre-post-touchspin .btn-touchspin.touchspin-primary {
-    background-color: #006666;
-    border: 1px solid #006666;
+    background-color: black;
+    border: 1px solid black;
     color: #fff;
 }
 
 .form-switch .form-check-input.switch-primary:checked {
-    background-color: #006666;
-    border-color: #006666;
+    background-color: black;
+    border-color: black;
 }
 
 .payment-second .mega-icons.stroke-primary {
-    stroke: #006666;
+    stroke: black;
 }
 
 .toast-primary {
-    color: #006666 !important;
+    color: black !important;
 }
 
 .list-group-horizontal-sm .list-group-item.border-left-primary,
@@ -4915,7 +4915,7 @@ strong~p {
 .list-group-horizontal-lg .list-group-item.border-left-primary,
 .list-group-horizontal-xl .list-group-item.border-left-primary,
 .list-group-horizontal-xxl .list-group-item.border-left-primary {
-    border-left: 4px solid #006666;
+    border-left: 4px solid black;
 }
 
 .main-radio-toggle .btn-check.radio-light-primary:focus+.btn {
@@ -4924,17 +4924,17 @@ strong~p {
 }
 
 .fill-radios .radio.radio-primary input[type=radio]:checked+label::before {
-    border: 10px solid #006666;
+    border: 10px solid black;
 }
 
 .fill-radios .radio.radio-primary input[type=radio]:checked+label::after {
-    background-color: #006666;
+    background-color: black;
 }
 
 .list-group .form-check-input:checked[type=checkbox].checkbox-primary,
 .list-group [type=radio].checkbox-primary {
     background-color: unset;
-    border-color: #006666;
+    border-color: black;
     outline: 0;
     background-color: unset;
 }
@@ -4945,9 +4945,9 @@ strong~p {
 .list-group [type=radio].checkbox-primary:focus,
 .list-group [type=radio].checkbox-primary:active,
 .list-group [type=radio].checkbox-primary.active {
-    border-color: #006666;
+    border-color: black;
     outline: 0;
-    background-color: #006666;
+    background-color: black;
 }
 
 .list-group .alert-primary.light {
@@ -4956,8 +4956,8 @@ strong~p {
 }
 
 .list-group .alert-primary.dark {
-    background-color: #006666;
-    border-color: #006666;
+    background-color: black;
+    border-color: black;
     color: #fafafa;
 }
 
@@ -4968,8 +4968,8 @@ strong~p {
 .list-group .alert-primary.outline,
 .list-group .alert-primary.outline-2x {
     background-color: transparent;
-    border-color: #006666;
-    color: #006666;
+    border-color: black;
+    color: black;
 }
 
 .list-group .alert-primary.outline .btn-close,
@@ -4981,7 +4981,7 @@ strong~p {
 .list-group .alert-primary.inverse {
     background-color: transparent;
     padding: 13px 20px 13px 65px;
-    border-color: #006666;
+    border-color: black;
     color: #051A1A;
 }
 
@@ -4992,7 +4992,7 @@ strong~p {
     left: 54px;
     width: 0;
     height: 0;
-    border-left: 7px solid #006666;
+    border-left: 7px solid black;
     border-top: 7px solid transparent;
     border-bottom: 7px solid transparent;
 }
@@ -5006,7 +5006,7 @@ strong~p {
 .list-group .alert-primary.inverse i {
     padding: 17px 20px;
     display: inline-block;
-    background-color: #006666;
+    background-color: black;
     color: #fff;
     border-radius: 3px 0 0 3px;
     position: absolute;
@@ -6963,12 +6963,12 @@ body.modal-open .select2-container--open .select2-dropdown {
 ==========================**/
 .dark-color-header {
     background-color: unset !important;
-    color: #006666;
+    color: black;
 }
 
 .dark-color-header ul li:first-child i,
 .dark-color-header ul li:last-child i {
-    color: #006666 !important;
+    color: black !important;
 }
 
 .dark-color-header ul li i {
@@ -6986,8 +6986,8 @@ body.modal-open .select2-container--open .select2-dropdown {
 }
 
 .purchase-btn {
-    background: -webkit-gradient(linear, left top, right top, color-stop(-18.33%, var(--theme-deafult)), color-stop(62.78%, #006666));
-    background: linear-gradient(90deg, var(--theme-deafult) -18.33%, #006666 62.78%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(-18.33%, var(--theme-deafult)), color-stop(62.78%, black));
+    background: linear-gradient(90deg, var(--theme-deafult) -18.33%, black 62.78%);
     padding: 12px 20px;
     min-width: 200px;
     border: none;
@@ -6996,8 +6996,8 @@ body.modal-open .select2-container--open .select2-dropdown {
 }
 
 .purchase-btn:hover {
-    background: -webkit-gradient(linear, left top, right top, color-stop(-18.33%, #006666), color-stop(62.78%, var(--theme-deafult)));
-    background: linear-gradient(90deg, #006666 -18.33%, var(--theme-deafult) 62.78%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(-18.33%, black), color-stop(62.78%, var(--theme-deafult)));
+    background: linear-gradient(90deg, black -18.33%, var(--theme-deafult) 62.78%);
     -webkit-transition: 0.5s;
     transition: 0.5s;
 }
@@ -7207,7 +7207,7 @@ body.modal-open .select2-container--open .select2-dropdown {
 }
 
 .btn.bg-light-primary:hover {
-    background: #006666 !important;
+    background: black !important;
     color: #fff !important;
 }
 
@@ -7252,8 +7252,8 @@ body.modal-open .select2-container--open .select2-dropdown {
 .btn-air-primary:hover,
 .btn-air-primary:active,
 .btn-air-primary:not([disabled]):not(.disabled):active {
-    background-color: #006666;
-    border-color: #006666;
+    background-color: black;
+    border-color: black;
 }
 
 .input-air-primary {
@@ -7262,7 +7262,7 @@ body.modal-open .select2-container--open .select2-dropdown {
 }
 
 .input-air-primary:focus {
-    border-color: #006666;
+    border-color: black;
 }
 
 .btn-air-secondary {
@@ -7417,7 +7417,7 @@ body.modal-open .select2-container--open .select2-dropdown {
     font-weight: 500;
     padding: 10px 30px;
     border-radius: 5px;
-    background: linear-gradient(26deg, var(--theme-deafult) 0%, #006666 100%);
+    background: linear-gradient(26deg, var(--theme-deafult) 0%, black 100%);
     letter-spacing: 0.06rem;
 }
 
@@ -8432,7 +8432,7 @@ table.dataTable.display tbody tr.even .badge {
 }
 
 .datepicker--day-name {
-    color: #006666;
+    color: black;
     font-weight: bold;
 }
 
@@ -8539,8 +8539,8 @@ table.dataTable.display tbody tr.even .badge {
 
 .calendar-basic .calendar-default .fc-h-event {
     padding: 2px;
-    background-color: #006666;
-    border: 1px solid #006666;
+    background-color: black;
+    border: 1px solid black;
 }
 
 .calendar-basic .calendar-default .fc-toolbar-chunk .fc-button-group~.fc-today-button {
@@ -9678,7 +9678,7 @@ textarea {
     height: 45px;
     border-radius: 50%;
     position: absolute;
-    border: 1px solid #006666;
+    border: 1px solid black;
 }
 
 .vertical-main-wizard .nav-link:active .vertical-wizard .vertical-wizard-content h6,
@@ -9742,7 +9742,7 @@ textarea {
 .basic-wizard .stepper-horizontal .step.done .step-circle {
     background-color: var(--white);
     border: 2px solid #52526c;
-    color: #006666;
+    color: black;
     z-index: 4;
     position: relative;
 }
@@ -11274,12 +11274,12 @@ textarea {
 }
 
 .checkbox-checked .form-check-input:checked {
-    background-color: #006666;
-    border-color: #006666;
+    background-color: black;
+    border-color: black;
 }
 
 .checkbox-checked .form-check-input:focus {
-    border-color: #006666;
+    border-color: black;
     -webkit-box-shadow: 0 0 0 4px rgba(0, 102, 102, 0.25);
     box-shadow: 0 0 0 4px rgba(0, 102, 102, 0.25);
 }
@@ -11388,7 +11388,7 @@ textarea {
 
 .main-icon-checkbox.checkbox-primary input[type=checkbox]:checked+label::before {
     color: transparent;
-    border: 2px solid #006666;
+    border: 2px solid black;
 }
 
 .main-icon-checkbox.checkbox-primary input[type=checkbox] {
@@ -11500,7 +11500,7 @@ textarea {
 
 .radio-wrapper li .form-check-input:checked,
 .checkbox-wrapper li .form-check-input:checked {
-    border: 2px solid #006666;
+    border: 2px solid black;
     background-color: transparent;
 }
 
@@ -13367,42 +13367,42 @@ textarea {
 }
 
 .ribbon-primary {
-    background: #006666;
+    background: black;
 }
 
 .ribbon-primary {
-    background: #006666;
+    background: black;
 }
 
 .ribbon-bookmark.ribbon-primary:before {
-    border-color: #006666;
+    border-color: black;
     border-right-color: transparent;
 }
 
 .ribbon-bookmark.ribbon-right.ribbon-primary:before {
-    border-right-color: #006666;
+    border-right-color: black;
     border-left-color: transparent;
 }
 
 .ribbon-bookmark.ribbon-vertical-left.ribbon-primary:before,
 .ribbon-bookmark.ribbon-vertical-right.ribbon-primary:before {
-    border-right-color: #006666;
+    border-right-color: black;
     border-bottom-color: transparent;
 }
 
 .ribbon-primary.ribbon-corner:before {
-    border-top-color: #006666;
-    border-left-color: #006666;
+    border-top-color: black;
+    border-left-color: black;
 }
 
 .ribbon-primary.ribbon-corner.ribbon-right:before {
-    border-right-color: #006666;
+    border-right-color: black;
     border-left-color: transparent;
 }
 
 .ribbon-primary.ribbon-corner.ribbon-bottom:before {
     border-top-color: transparent;
-    border-bottom-color: #006666;
+    border-bottom-color: black;
 }
 
 .ribbon-primary.ribbon-clip:before {
@@ -13900,18 +13900,18 @@ textarea {
 .irs--flat .irs-to,
 .irs--flat .irs-single,
 .irs--flat .irs-bar {
-    background-color: #006666;
+    background-color: black;
 }
 
 .irs--flat .irs-from::before,
 .irs--flat .irs-to::before,
 .irs--flat .irs-single::before,
 .irs--flat .irs-bar::before {
-    border-top-color: #006666;
+    border-top-color: black;
 }
 
 .irs--flat .irs-handle i:first-child {
-    background-color: #006666;
+    background-color: black;
 }
 
 .irs--round .irs-single {
@@ -14432,7 +14432,7 @@ textarea {
 }
 
 .tgl-skewed:checked+.tgl-btn {
-    background: #006666;
+    background: black;
 }
 
 .tgl-skewed:checked+.tgl-btn:before {
@@ -15266,14 +15266,14 @@ textarea {
 }
 
 #bottom-tab .nav-border.tab-primary:hover {
-    color: #006666;
+    color: black;
 }
 
 #bottom-tab .nav-border.tab-primary:focus,
 #bottom-tab .nav-border.tab-primary:active,
 #bottom-tab .nav-border.tab-primary.active {
-    color: #006666;
-    border-bottom: 2px solid #006666;
+    color: black;
+    border-bottom: 2px solid black;
 }
 
 #bottom-tab .nav-border.tab-secondary:hover {
@@ -15465,7 +15465,7 @@ tbody tr:last-child {
 
 #row_create td.highlight {
     font-weight: 600;
-    color: #006666;
+    color: black;
 }
 
 #row_create td.danger {
@@ -16280,8 +16280,8 @@ input[type=number] {
 }
 
 .treejs .treejs-node__halfchecked>.treejs-checkbox:before {
-    background-color: #006666 !important;
-    border-color: #006666 !important;
+    background-color: black !important;
+    border-color: black !important;
 }
 
 [dir=rtl] .treejs .treejs-node__halfchecked>.treejs-checkbox:after {
@@ -16720,7 +16720,7 @@ input[type=number] {
 
 .timeline-calendar .custom-calendar .time-line .fc-timegrid-col .fc-timegrid-col-frame .fc-timegrid-event-harness .fc-v-event .fc-event-main {
     color: var(--body-font-color);
-    border-left: 3px solid #006666;
+    border-left: 3px solid black;
     border-top: 1px solid #E6E9EB;
     border-bottom: 1px solid #E6E9EB;
     border-right: 1px solid #E6E9EB;
@@ -16769,12 +16769,12 @@ input[type=number] {
 }
 
 .calendar-default .fc-media-screen .fc-list-event-dot {
-    border-color: #006666;
+    border-color: black;
 }
 
 .calendar-default .fc-media-screen .fc-v-event {
-    border-color: #006666;
-    background-color: #006666;
+    border-color: black;
+    background-color: black;
 }
 
 @media (max-width: 1499px) {
@@ -20622,7 +20622,7 @@ p.data-attributes svg {
     top: 50%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
-    background-color: #006666;
+    background-color: black;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -20663,7 +20663,7 @@ p.data-attributes svg {
     position: absolute;
     height: 7px;
     width: 0;
-    background-color: #006666;
+    background-color: black;
     border-radius: 10px 0 0 10px;
 }
 
@@ -21267,7 +21267,7 @@ p.data-attributes svg {
 .activity-dot-primary {
     min-width: 6px;
     height: 6px;
-    background-color: #006666;
+    background-color: black;
     border-radius: 100%;
     outline: 5px solid rgba(0, 102, 102, 0.25);
     position: relative;
@@ -21277,7 +21277,7 @@ p.data-attributes svg {
 .timeline-dot-primary {
     min-width: 12px;
     height: 12px;
-    background-color: #006666;
+    background-color: black;
     outline: 5px solid rgba(0, 102, 102, 0.25);
     position: relative;
     z-index: 2;
@@ -22170,7 +22170,7 @@ p.data-attributes svg {
 }
 
 .projectlist-card .projectlist .badge-primary {
-    color: #006666;
+    color: black;
 }
 
 .projectlist-card .project-comment {
@@ -22295,7 +22295,7 @@ p.data-attributes svg {
 }
 
 .project-meeting-details:hover a {
-    color: #006666;
+    color: black;
 }
 
 .avatar-showcase img.img-25 {
@@ -22359,7 +22359,7 @@ p.data-attributes svg {
 }
 
 .client-list-table table tbody tr:hover td a {
-    color: #006666;
+    color: black;
 }
 
 .client-list-table table tbody tr:first-child td {
@@ -22437,7 +22437,7 @@ p.data-attributes svg {
 }
 
 .activity-log-card ul li div .username:hover {
-    color: #006666;
+    color: black;
 }
 
 .activity-log {
@@ -22474,7 +22474,7 @@ p.data-attributes svg {
 }
 
 .activity-log:hover h6 a {
-    color: #006666 !important;
+    color: black !important;
 }
 
 .user-message svg {
@@ -23596,7 +23596,7 @@ p.data-attributes svg {
 }
 
 .square-group .primary {
-    background: #006666;
+    background: black;
 }
 
 .square-group .danger {
@@ -24306,7 +24306,7 @@ p.data-attributes svg {
 }
 
 .deliveries-percentage .percentage-data tbody tr:hover td a {
-    color: #006666;
+    color: black;
 }
 
 .deliveries-percentage .percentage-data tbody tr:last-child {
@@ -24961,7 +24961,7 @@ p.data-attributes svg {
 }
 
 .badge-light-primary span {
-    color: #006666 !important;
+    color: black !important;
 }
 
 .badge-light-secondary {
@@ -25220,7 +25220,7 @@ p.data-attributes svg {
 }
 
 .card .card-footer .common-space:hover a {
-    color: #006666;
+    color: black;
 }
 
 .sales-wrapper .apexcharts-xaxistooltip {
@@ -25508,7 +25508,7 @@ p.data-attributes svg {
 }
 
 .sale-history-card:hover .history-price a {
-    color: #006666 !important;
+    color: black !important;
 }
 
 .sale-history-card .history-price {
@@ -26560,7 +26560,7 @@ p.data-attributes svg {
 }
 
 .user-list .user-icon.primary {
-    border: 1px solid #006666;
+    border: 1px solid black;
 }
 
 .user-list .user-icon.primary .user-box {
@@ -26758,7 +26758,7 @@ p.data-attributes svg {
 }
 
 .fill-primary {
-    fill: #006666;
+    fill: black;
 }
 
 .fill-secondary {
@@ -28113,8 +28113,8 @@ footer.blockquote-footer {
 }
 
 .product-social li a:hover {
-    border-color: #006666;
-    color: #006666;
+    border-color: black;
+    color: black;
     background-color: rgba(0, 102, 102, 0.1);
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
@@ -28733,7 +28733,7 @@ footer.blockquote-footer {
 
 .email-wrap .dropdown .dropdown-toggle {
     background-color: rgba(115, 102, 255, 0.08);
-    color: #006666;
+    color: black;
     border-radius: 10px;
     padding: 5px 10px;
     width: 100px;
@@ -30942,11 +30942,11 @@ footer.blockquote-footer {
 }
 
 .file-sidebar .btn.btn-light:hover {
-    color: #006666 !important;
+    color: black !important;
 }
 
 .file-sidebar .btn.btn-light:hover svg {
-    stroke: #006666;
+    stroke: black;
 }
 
 .file-sidebar .btn svg {
@@ -32668,7 +32668,7 @@ html:hover .cursor {
 .cursor--hover .cursor-outer {
     -webkit-transform: scale(1.4);
     transform: scale(1.4);
-    border-color: #006666;
+    border-color: black;
     opacity: 1;
 }
 
@@ -32694,7 +32694,7 @@ html:hover .cursor {
     display: block;
     width: 80%;
     height: 80%;
-    background: #006666;
+    background: black;
     border-radius: 50%;
     -webkit-transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
     transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
@@ -32706,7 +32706,7 @@ html:hover .cursor {
     display: block;
     width: 70%;
     height: 70%;
-    border: 1px solid #006666;
+    border: 1px solid black;
     border-radius: 50%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -32845,7 +32845,7 @@ html:hover .cursor {
 
 .mesh-loader .circle {
     position: absolute;
-    background: #006666;
+    background: black;
     border-radius: 50%;
     margin: -3px;
     -webkit-animation: mesh 3s ease-in-out infinite -1.5s;
@@ -32928,7 +32928,7 @@ html:hover .cursor {
 }
 
 .feature-box:hover {
-    background-color: #006666;
+    background-color: black;
 }
 
 .feature-box:hover h5 {
@@ -33136,7 +33136,7 @@ html:hover .cursor {
 }
 
 .landing-page .section-py-space .title h5 {
-    color: #006666;
+    color: black;
     text-align: center;
     font-family: Caveat;
     font-weight: 700;
@@ -33199,7 +33199,7 @@ html:hover .cursor {
     left: 3%;
     -webkit-transform: translate(10%);
     transform: translate(10%);
-    color: #006666;
+    color: black;
     text-align: center;
     font-family: Caveat;
     font-weight: 700;
@@ -33248,7 +33248,7 @@ html:hover .cursor {
 .landing-page .demo-section .demo-box .layout-name a {
     font-size: 17px;
     font-weight: 600;
-    color: #006666;
+    color: black;
     text-overflow: ellipsis;
     overflow: hidden;
     display: -webkit-box !important;
@@ -33278,7 +33278,7 @@ html:hover .cursor {
 }
 
 .landing-page .demo-section .demo-box .layout-name .riho-demo-img ul li:first-child {
-    background-color: #006666;
+    background-color: black;
 }
 
 .landing-page .demo-section .demo-box .layout-name .riho-demo-img ul li:nth-child(2) {
@@ -33296,7 +33296,7 @@ html:hover .cursor {
 
 .landing-page .demo-section .demo-box .demo-title .btn {
     text-transform: capitalize;
-    border: 1px solid #006666;
+    border: 1px solid black;
     padding: 8px 15px;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
@@ -33304,7 +33304,7 @@ html:hover .cursor {
 }
 
 .landing-page .demo-section .demo-box .demo-title .btn:hover {
-    background-color: #006666;
+    background-color: black;
     color: #fff;
 }
 
@@ -33381,7 +33381,7 @@ html:hover .cursor {
 .landing-page .application-section .app-box .layout-name a {
     font-size: 17px;
     font-weight: 600;
-    color: #006666;
+    color: black;
 }
 
 .landing-page .application-section .app-box .layout-name .riho-demo-img ul {
@@ -33405,7 +33405,7 @@ html:hover .cursor {
 }
 
 .landing-page .application-section .app-box .layout-name .riho-demo-img ul li:first-child {
-    background-color: #006666;
+    background-color: black;
 }
 
 .landing-page .application-section .app-box .layout-name .riho-demo-img ul li:nth-child(2) {
@@ -33430,12 +33430,12 @@ html:hover .cursor {
     font-weight: 600;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    color: #006666;
+    color: black;
 }
 
 .landing-page .application-section .app-box .demo-title .btn:hover,
 .landing-page .application-section .app-box .demo-title .btn:active {
-    background-color: #006666 !important;
+    background-color: black !important;
     color: #fff !important;
 }
 
@@ -33831,7 +33831,7 @@ html:hover .cursor {
 }
 
 .testimonial-slider .slick-dots li.slick-active button {
-    background: #006666;
+    background: black;
     border-radius: 20px;
     width: 20px;
     -webkit-transition: all 0.5s;
@@ -33980,7 +33980,7 @@ html:hover .cursor {
 
 .demo-section .title h2,
 .feature-section .title h2 {
-    color: #006666;
+    color: black;
     font-size: 40px;
 }
 
@@ -34447,7 +34447,7 @@ html:hover .cursor {
 }
 
 .landing-home .content h1 span {
-    background: #006666;
+    background: black;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -34893,8 +34893,8 @@ html:hover .cursor {
     height: 3px;
     top: 35px;
     width: 15px;
-    color: #006666;
-    background-color: #006666;
+    color: black;
+    background-color: black;
 }
 
 .landing-page .navbar-expand-xl .navbar-collapse {
@@ -34909,8 +34909,8 @@ html:hover .cursor {
 
 .landing-page .buy-btn {
     font-size: 16px;
-    background: -webkit-gradient(linear, left top, right top, color-stop(-18.33%, #006666), color-stop(62.78%, #006666));
-    background: linear-gradient(90deg, #006666 -18.33%, #006666 62.78%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(-18.33%, black), color-stop(62.78%, black));
+    background: linear-gradient(90deg, black -18.33%, black 62.78%);
     border-radius: 7px;
     padding: 11px 39px;
     margin-left: 10px;
@@ -34941,7 +34941,7 @@ html:hover .cursor {
 }
 
 .landing-page .navbar-nav .nav-item .nav-link a:active {
-    color: #006666;
+    color: black;
 }
 
 .landing-page .sticky-header header {
@@ -34994,7 +34994,7 @@ html:hover .cursor {
 }
 
 .faq-section .accordion-button:not(.collapsed) {
-    color: #006666;
+    color: black;
     background: transparent;
 }
 
@@ -35967,7 +35967,7 @@ footer .license-list h6 {
 .pricing-section .landing-title h5 {
     font-weight: 700;
     font-family: "Montserrat", sans-serif;
-    color: #006666;
+    color: black;
 }
 
 .pricing-section .landing-title h4 {
@@ -36433,7 +36433,7 @@ footer .license-list h6 {
     }
 
     .navbar-toggler span {
-        background-color: #006666;
+        background-color: black;
     }
 
     .application-sec.demo-section .demo-box,
@@ -37103,7 +37103,7 @@ footer .license-list h6 {
 
     .framework .nav .nav-link.active,
     .framework .nav .nav-link.show {
-        border-bottom: 2px solid #006666;
+        border-bottom: 2px solid black;
     }
 
     .framework ul.framworks-list li {
@@ -37661,7 +37661,7 @@ footer .license-list h6 {
 .main-upgrade i {
     font-size: calc(40px + 10 * (100vw - 320px) / 1600);
     display: block;
-    color: #006666;
+    color: black;
 }
 
 .main-upgrade p {
@@ -37706,7 +37706,7 @@ footer .license-list h6 {
 .main-upgrade .variation-box .selection-box {
     position: relative;
     height: 100px;
-    border: 1px dashed #006666;
+    border: 1px dashed black;
     min-width: 125px;
     border-radius: 15px;
 }
@@ -38481,7 +38481,7 @@ footer .license-list h6 {
     content: "";
     top: -2px;
     right: -9px;
-    background-color: #006666;
+    background-color: black;
     width: 12px;
     height: 12px;
     border-radius: 100%;
@@ -38510,7 +38510,7 @@ footer .license-list h6 {
     right: -18px;
     height: 30px;
     width: 30px;
-    border: 14px solid #006666;
+    border: 14px solid black;
     border-radius: 70px;
     -webkit-animation: heart 1s ease-in-out;
     animation: heart 1s ease-in-out;
@@ -39887,11 +39887,11 @@ html {
 }
 
 .todo .action-box.large .icon .icon-trash {
-    color: #006666;
+    color: black;
 }
 
 .todo .action-box.large .icon .icon-check {
-    color: #006666;
+    color: black;
 }
 
 .todo .todo-list-wrapper {
@@ -39982,7 +39982,7 @@ html {
 }
 
 .todo .todo-list-wrapper #todo-list li.completed .task-container .complete-btn {
-    border: 1px solid #006666;
+    border: 1px solid black;
     border-radius: 4px;
 }
 
@@ -40005,7 +40005,7 @@ html {
 
 .todo .todo-list-wrapper #todo-list li.completed .task-container .task-label {
     text-decoration: line-through;
-    color: #006666;
+    color: black;
 }
 
 .todo .todo-list-wrapper #todo-list li.new .task-container {
@@ -40151,7 +40151,7 @@ html {
 }
 
 .todo-wrap.email-wrap .email-app-sidebar .main-menu>li a:hover {
-    color: #006666;
+    color: black;
     background-color: transparent;
 }
 
@@ -40160,7 +40160,7 @@ html {
 }
 
 .todo-wrap.email-wrap .email-app-sidebar .main-menu>li a:hover .title {
-    color: #006666;
+    color: black;
 }
 
 /*====todo css end====*/
@@ -40206,7 +40206,7 @@ html {
     position: relative;
     width: 53px;
     height: 53px;
-    background-image: linear-gradient(26deg, var(--theme-deafult) 0%, #006666 100%);
+    background-image: linear-gradient(26deg, var(--theme-deafult) 0%, black 100%);
     border-radius: 100%;
     top: -18px;
 }
@@ -40842,7 +40842,7 @@ html {
     transition: 0.2s ease-in;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
-    background-color: #006666;
+    background-color: black;
     outline: 6px solid rgba(0, 102, 102, 0.2);
     display: block;
     margin: 0px;
@@ -40945,7 +40945,7 @@ html {
     width: 1px;
     margin: 0 auto;
     position: relative;
-    border: 1px dashed #006666;
+    border: 1px dashed black;
 }
 
 .list-group.main-lists-content {
@@ -41195,7 +41195,7 @@ body.dark-only span {
 }
 
 body.dark-only .txt-primary {
-    color: #006666 !important;
+    color: black !important;
 }
 
 body.dark-only .txt-secondary {
@@ -41450,7 +41450,7 @@ body.dark-only .customers ul li:last-child p {
 }
 
 body.dark-only .invoice-text span {
-    color: #006666;
+    color: black;
 }
 
 body.dark-only .invoice-table-data {
@@ -41600,7 +41600,7 @@ body.dark-only .today-work-table .today-working-table tbody tr td a {
 }
 
 body.dark-only .today-work-table .today-working-table tbody tr:hover td a {
-    color: #006666 !important;
+    color: black !important;
 }
 
 body.dark-only .apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-series-group .apexcharts-tooltip-text .apexcharts-tooltip-y-group span {
@@ -41616,11 +41616,11 @@ body.dark-only .activity-log h6 a {
 }
 
 body.dark-only span.dayName {
-    color: #006666 !important;
+    color: black !important;
 }
 
 body.dark-only .fc-scrollgrid-sync-inner a.fc-col-header-cell-cushion {
-    color: #006666 !important;
+    color: black !important;
 }
 
 body.dark-only .badge-light {
@@ -42875,7 +42875,7 @@ body.dark-only .datepicker {
 }
 
 body.dark-only .datepicker .datepicker--cell.-current- {
-    color: #006666;
+    color: black;
 }
 
 body.dark-only .datepicker .datepicker--cell.-current-.-focus- {
@@ -48237,7 +48237,7 @@ body[class*=dark-] .for-light {
 }
 
 .customizer-contain .customizer-body .color-layout>div {
-    background-color: #006666;
+    background-color: black;
     height: 100%;
     width: 100%;
     border-radius: 5px;
@@ -48451,7 +48451,7 @@ body[class*=dark-] .for-light {
 
 .popover .popover-header {
     background-color: #F5F5F5;
-    color: #006666;
+    color: black;
     border-bottom: none;
 }
 
@@ -48492,7 +48492,7 @@ body[class*=dark-] .for-light {
 
 .tooltip .tooltip-inner {
     background-color: #F5F5F5;
-    color: #006666;
+    color: black;
 }
 
 .tooltip .tooltip-arrow:before {
@@ -48648,15 +48648,15 @@ body[class*=dark-] .for-light {
 }
 
 .border-tab .nav-tabs .nav-item .nav-link.active {
-    border-bottom: 2px solid #006666;
+    border-bottom: 2px solid black;
 }
 
 .border-tab .nav-tabs .nav-item .nav-link.show {
-    border-bottom: 2px solid #006666;
+    border-bottom: 2px solid black;
 }
 
 .border-tab .nav-tabs .nav-item .nav-link:focus {
-    border-bottom: 2px solid #006666;
+    border-bottom: 2px solid black;
 }
 
 .timeliny .timeliny-dot::before {
@@ -48799,7 +48799,7 @@ body[class*=dark-] .for-light {
 
 .starter-main .alert-primary.inverse {
     padding: 13px 20px 13px 65px;
-    border-color: #006666;
+    border-color: black;
     color: #2c323f;
 }
 
@@ -48813,13 +48813,13 @@ body[class*=dark-] .for-light {
     left: 54px;
     width: 0;
     height: 0;
-    border-left: 7px solid #006666;
+    border-left: 7px solid black;
     border-top: 7px solid transparent;
     border-bottom: 7px solid transparent;
 }
 
 [dir=rtl] .starter-main .alert-primary.inverse:before {
-    border-right: 7px solid #006666;
+    border-right: 7px solid black;
     border-left: unset;
 }
 
@@ -48831,7 +48831,7 @@ body[class*=dark-] .for-light {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    background-color: #006666;
+    background-color: black;
     color: #fff;
     border-radius: 3px 0 0 3px;
     position: absolute;
@@ -49164,7 +49164,7 @@ table.table-bordered thead tr th p {
 }
 
 .page-wrapper .page-header .header-wrapper .nav-right .onhover-show-div .notitications-bar .notification-card a:hover {
-    color: #006666;
+    color: black;
 }
 
 .page-wrapper .page-header .header-wrapper .nav-right .onhover-show-div .notitications-bar ul {
@@ -49269,7 +49269,7 @@ table.table-bordered thead tr th p {
 }
 
 .page-wrapper .page-header .header-wrapper .nav-right .onhover-show-div .notitications-bar .user-message ul li:hover a {
-    color: #006666;
+    color: black;
 }
 
 .onhover-show-div {
@@ -49412,23 +49412,23 @@ table.table-bordered thead tr th p {
 }
 
 .search-page .theme-form input::-webkit-input-placeholder {
-    color: #006666;
+    color: black;
 }
 
 .search-page .theme-form input::-moz-placeholder {
-    color: #006666;
+    color: black;
 }
 
 .search-page .theme-form input:-ms-input-placeholder {
-    color: #006666;
+    color: black;
 }
 
 .search-page .theme-form input::-ms-input-placeholder {
-    color: #006666;
+    color: black;
 }
 
 .search-page .theme-form input::placeholder {
-    color: #006666;
+    color: black;
 }
 
 .search-page .theme-form input:focus {
@@ -49479,7 +49479,7 @@ table.table-bordered thead tr th p {
 }
 
 .search-page .info-block h6 {
-    color: #006666;
+    color: black;
 }
 
 .search-page .info-block+.info-block {
@@ -49542,7 +49542,7 @@ table.table-bordered thead tr th p {
     display: inline-flex;
     border-radius: 10px;
     overflow: hidden;
-    border: 1px solid #006666;
+    border: 1px solid black;
     border: none;
 }
 
@@ -49787,7 +49787,7 @@ table.table-bordered thead tr th p {
 }
 
 .filepond--list .filepond--file {
-    background-color: #006666;
+    background-color: black;
 }
 
 /* Do not show the "remove tag" (x) button when only a single tag remains */
@@ -50615,7 +50615,7 @@ table.table-bordered thead tr th p {
 .page-wrapper .page-header .header-wrapper .nav-right .flip-card .flip-card-inner .front button,
 .page-wrapper .page-header .header-wrapper .nav-right .flip-card .flip-card-inner .back button {
     background-color: transparent;
-    color: #006666;
+    color: black;
     border: none;
 }
 
@@ -51364,7 +51364,7 @@ table.table-bordered thead tr th p {
 }
 
 .page-wrapper.horizontal-wrapper .page-body-wrapper .sidebar-wrapper .sidebar-main .sidebar-links .simplebar-wrapper .simplebar-mask .simplebar-content-wrapper .simplebar-content>li .sidebar-submenu li a:hover {
-    color: #006666;
+    color: black;
     letter-spacing: 1.5px;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
@@ -51816,7 +51816,7 @@ table.table-bordered thead tr th p {
     padding: 4px 6px;
     color: #fff;
     font-size: 11px;
-    background-color: #006666;
+    background-color: black;
     border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
@@ -52593,13 +52593,13 @@ table.table-bordered thead tr th p {
 
 .page-wrapper.compact-sidebar .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links li a.active {
     background: rgba(0, 102, 102, 0.1);
-    color: #006666;
+    color: black;
     border-radius: 20px;
     margin: 0 10px;
 }
 
 .page-wrapper.compact-sidebar .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links li a.active span {
-    color: #006666;
+    color: black;
 }
 
 .page-wrapper.compact-sidebar .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links li a.active~.sidebar-submenu,
@@ -52655,7 +52655,7 @@ table.table-bordered thead tr th p {
 .page-wrapper.compact-sidebar .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links li .sidebar-submenu li a.active,
 .page-wrapper.compact-sidebar .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links li .mega-menu-container li a.active {
     background-color: rgba(0, 102, 102, 0.1);
-    color: #006666;
+    color: black;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
@@ -52799,7 +52799,7 @@ table.table-bordered thead tr th p {
     position: absolute;
     top: 8px;
     right: 22px;
-    color: #006666;
+    color: black;
     width: 20px;
     height: 20px;
     background-color: rgba(0, 102, 102, 0.2);
@@ -53048,7 +53048,7 @@ table.table-bordered thead tr th p {
 }
 
 .page-wrapper.modern-type .alert-primary {
-    color: #006666;
+    color: black;
 }
 
 .page-wrapper.modern-type .project-box {
@@ -53835,12 +53835,12 @@ html[dir=rtl] .projectlist-card .project-comment .project-comment-icon .project-
 
 html[dir=rtl] .figure.text-start blockquote {
     border-left: none !important;
-    border-right: 4px solid #006666 !important;
+    border-right: 4px solid black !important;
 }
 
 html[dir=rtl] .figure.text-end blockquote {
     border-right: none !important;
-    border-left: 4px solid #006666 !important;
+    border-left: 4px solid black !important;
 }
 
 html[dir=rtl] .client-list-table table tbody tr td .user-id::before {
@@ -55131,7 +55131,7 @@ html[dir=rtl] .form-floating input {
 }
 
 html[dir=rtl] .horizontal-list-wrapper .border-left-primary {
-    border-right: 4px solid #006666;
+    border-right: 4px solid black;
     border-left: unset;
 }
 
@@ -56061,7 +56061,7 @@ html[dir=rtl] .inverse i {
 }
 
 html[dir=rtl] .alert-primary.inverse:before {
-    border-right: 7px solid #006666;
+    border-right: 7px solid black;
     right: 54px;
     left: unset;
     border-left: unset;
