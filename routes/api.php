@@ -4,6 +4,7 @@ use App\Http\Controllers\Api\Auth\LoginController;
 use App\Http\Controllers\Api\Auth\RegisterController;
 use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\API\BlogController;
+use App\Http\Controllers\API\CommentReaction\CommentReactionController;
 use App\Http\Controllers\Api\FavoriteTeamController;
 use App\Http\Controllers\Api\FollowController;
 use App\Http\Controllers\API\Football\LiveScoreController;
@@ -112,8 +113,17 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::get('/fixtures-lineups', 'getLineUpsbyFixture');
         Route::get('/fixtures-events', 'getEventsByFixture');
         Route::get('/fixtures-statistics', 'getStatisticsByFixture');
+        Route::get('/community-user-rating', 'communityUserRating');
     });
     Route::prefix('/match-ratings')->controller(MatchRatingController::class)->group(function () {
         Route::post('/store', 'store');
+        Route::get('/feed', 'feed');
+        Route::get('/my-rating', 'myRating');
+        Route::get('/my-national-rating', 'myNationalRating');
+    });
+    Route::prefix('/comment-reaction')->controller(CommentReactionController::class)->group(function () {
+        Route::post('/comment/store', 'storeComment');
+        Route::post('/reaction/store', 'storeReaction');
+        Route::get('/all-comment', 'allComment');
     });
 });

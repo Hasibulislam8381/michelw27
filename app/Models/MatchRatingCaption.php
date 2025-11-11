@@ -10,6 +10,7 @@ class MatchRatingCaption extends Model
     use HasFactory;
     public $guarded = [];
 
+    protected $hidden = ['created_at', 'updated_at'];
     public function user()
     {
         return $this->belongsTo(User::class, 'rated_by');
