@@ -137,6 +137,49 @@ class MatchRatingController extends Controller
 
         return $this->success($grouped, 'Feed fetched successfully.', 200);
     }
+    public function latestMatches()
+    {
+        $userId = Auth::id();
+
+        // Fetch the latest 10 match captions for the authenticated user
+        $captions = MatchRatingCaption::with([
+            'user:id,name',
+            'ratings' => function ($q) {
+                $q->where('is_mom', true);
+            },
+            'reactions',
+            'comments'
+        ])->where('rated_by', $userId) // only this user's matches
+            ->latest()
+            ->get();
+
+        $feed = $captions->map(function ($caption) {
+            $mom = $caption->ratings->first();
+
+            // Count reactions by type
+            $likesCount = $caption->reactions->where('type', 'like')->count();
+            $dislikesCount = $caption->reactions->where('type', 'dislike')->count();
+            $commentCount = $caption->comments->count();
+
+            return [
+                'caption_id' => $caption->id,
+                'user_id' => $caption->rated_by,
+                'user_name' => $caption->user->name ?? 'Unknown',
+                'home_team_name' => $caption->home_team_name,
+                'away_team_name' => $caption->away_team_name,
+                'team_id' => $caption->team_id,
+                'caption' => $caption->caption,
+                'mom_player_name' => $mom->name ?? null,
+                'likes_count' => $likesCount,
+                'dislikes_count' => $dislikesCount,
+                'comment_count' => $commentCount
+            ];
+        });
+
+        return $this->success($feed, 'Latest  matches fetched successfully.', 200);
+    }
+
+
     public function myRating()
     {
         $userId = Auth::id();

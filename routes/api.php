@@ -114,12 +114,14 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::get('/fixtures-events', 'getEventsByFixture');
         Route::get('/fixtures-statistics', 'getStatisticsByFixture');
         Route::get('/community-user-rating', 'communityUserRating');
+        Route::get('/team-leaderboard', 'teamLeaderboard');
     });
     Route::prefix('/match-ratings')->controller(MatchRatingController::class)->group(function () {
         Route::post('/store', 'store');
         Route::get('/feed', 'feed');
         Route::get('/my-rating', 'myRating');
         Route::get('/my-national-rating', 'myNationalRating');
+        Route::get('/latest-mathes', 'latestMatches');
     });
     Route::prefix('/comment-reaction')->controller(CommentReactionController::class)->group(function () {
         Route::post('/comment/store', 'storeComment');

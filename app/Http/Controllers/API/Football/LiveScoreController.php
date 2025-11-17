@@ -350,6 +350,159 @@ class LiveScoreController extends Controller
             return $this->error([], $e->getMessage(), 500);
         }
     }
+    public function teamLeaderboard(Request $request)
+    {
+        $teamId = $request->query('team_id');
+
+        if (!$teamId) {
+            return $this->error([], 'Team ID is required', 400);
+        }
+
+        try {
+            $client = new \GuzzleHttp\Client();
+            $baseUrl = config('services.api_football.base_url');
+            $apiKey = config('services.api_football.api_key');
+
+            // 1️⃣ Get all fixtures for this team in the current season
+            $season = date('Y'); // adjust if your season crosses years
+
+            $fixturesResponse = $client->get($baseUrl . 'fixtures', [
+                'headers' => ['x-apisports-key' => $apiKey],
+                'query' => [
+                    'team' => $teamId,
+                    'season' => $season,
+                ],
+            ]);
+
+            $fixtures = json_decode($fixturesResponse->getBody(), true)['response'] ?? [];
+
+            if (empty($fixtures)) {
+                return $this->error([], 'No fixtures found for this team in the current season', 404);
+            }
+
+            $fixtureIds = array_map(function ($f) {
+                return $f['fixture']['id'] ?? null;
+            }, $fixtures);
+
+            // 2️⃣ Get all ratings for these fixtures + team
+            $ratings = MatchRating::whereIn('match_id', $fixtureIds)
+                ->where('team_id', $teamId)
+                ->get();
+
+            if ($ratings->isEmpty()) {
+                return $this->error([], 'No ratings found for this team', 404);
+            }
+
+            // 3️⃣ Compute average ratings & MOM count
+            $ratingsByEntity = [];
+            $momCountByPlayer = [];
+
+            foreach ($ratings as $r) {
+                $entityId = $r->entity_id;
+                $entityType = $r->entity_type; // player or coach
+
+                if (!isset($ratingsByEntity[$entityType][$entityId])) {
+                    $ratingsByEntity[$entityType][$entityId] = [];
+                    if ($entityType === 'player') {
+                        $momCountByPlayer[$entityId] = 0;
+                    }
+                }
+
+                $ratingsByEntity[$entityType][$entityId][] = $r->rating;
+
+                if ($entityType === 'player' && $r->is_mom) {
+                    $momCountByPlayer[$entityId]++;
+                }
+            }
+
+            $averageRatings = [];
+            foreach ($ratingsByEntity as $entityType => $entities) {
+                foreach ($entities as $entityId => $allRatings) {
+                    $averageRatings[$entityType][$entityId] = round(array_sum($allRatings) / count($allRatings), 1);
+                }
+            }
+
+            // 4️⃣ Determine MOM & highest rated player
+            $momPlayerId = array_keys($momCountByPlayer, max($momCountByPlayer))[0] ?? null;
+            $highestRatedPlayerId = array_keys($averageRatings['player'] ?? [], max($averageRatings['player'] ?? []))[0] ?? null;
+            $momCount = $momCountByPlayer[$momPlayerId] ?? 0;
+
+            // 5️⃣ Fetch last match lineup from API
+            $lastMatch = end($fixtures);
+            $lastMatchId = $lastMatch['fixture']['id'] ?? null;
+
+            $lineupWithRatings = null;
+            $momPlayerName = null;
+
+            if ($lastMatchId) {
+                $lineupResponse = $client->get($baseUrl . 'fixtures/lineups', [
+                    'headers' => ['x-apisports-key' => $apiKey],
+                    'query' => ['fixture' => $lastMatchId],
+                ]);
+
+                $lineups = json_decode($lineupResponse->getBody(), true)['response'] ?? [];
+                $teamLineup = collect($lineups)->firstWhere('team.id', $teamId);
+
+                if ($teamLineup) {
+                    $mapPlayer = function ($player) use ($averageRatings, $momPlayerId, $momCountByPlayer) {
+                        $playerId = $player['player']['id'] ?? null;
+                        return [
+                            'id' => $playerId,
+                            'name' => $player['player']['name'] ?? null,
+                            'number' => $player['player']['number'] ?? null,
+                            'position' => $player['player']['position'] ?? null,
+                            'rating' => $averageRatings['player'][$playerId] ?? null,
+                            'is_mom' => $playerId == $momPlayerId,
+                            'mom_count' => $momCountByPlayer[$playerId] ?? 0, // ✅ Added: total MOM count this season
+                        ];
+                    };
+
+                    $starters = collect($teamLineup['startXI'] ?? [])->map($mapPlayer);
+                    $bench = collect($teamLineup['substitutes'] ?? [])->map($mapPlayer);
+
+                    $momPlayerName = $starters->firstWhere('is_mom', true)['name']
+                        ?? $bench->firstWhere('is_mom', true)['name']
+                        ?? null;
+
+                    $coachData = $teamLineup['coach'] ?? [];
+                    $coach = [
+                        'id' => $coachData['id'] ?? null,
+                        'name' => $coachData['name'] ?? null,
+                        'photo' => $coachData['photo'] ?? null,
+                        'rating' => $averageRatings['coach'][$coachData['id']] ?? null,
+                    ];
+
+                    $lineupWithRatings = [
+                        'team' => $teamLineup['team'],
+                        'coach' => $coach,
+                        'starters' => $starters,
+                        'bench' => $bench,
+                    ];
+                }
+
+                $allPlayers = collect($lineupWithRatings['starters'] ?? [])
+                    ->merge($lineupWithRatings['bench'] ?? []);
+
+                $highestRatedPlayerName = $allPlayers->firstWhere('id', $highestRatedPlayerId)['name'] ?? null;
+            }
+
+            $response = [
+                'team_id' => $teamId,
+                'lastMatchId' => $lastMatchId,
+                'mom_player_name' => $momPlayerName,
+                'mom_count' => $momCount, // ✅ Added total MOM count for season
+                'highest_rated_player_id' => $highestRatedPlayerId,
+                'highestRatedPlayerName' => $highestRatedPlayerName,
+                'average_ratings' => $averageRatings,
+                'last_match_lineup' => $lineupWithRatings,
+            ];
+
+            return $this->success($response, 'Team leaderboard stats retrieved successfully');
+        } catch (\Exception $e) {
+            return $this->error([], $e->getMessage(), 500);
+        }
+    }
+
 
 
     // public function communityUserRating(Request $request)
